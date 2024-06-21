@@ -2,10 +2,6 @@
   <Home />
 </template>
 
-<style>
-@import './assets/style/common.less';
-</style>
-
 <script>
 import Home from './views/Home.vue'
   export default{
@@ -14,7 +10,7 @@ import Home from './views/Home.vue'
     },
     methods: {
       customFilter(data){
-        return data.toUpperCase()
+        return data.toUpperCase()   
       }
     }
   }

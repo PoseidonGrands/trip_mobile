@@ -14,6 +14,7 @@ export default defineConfig({
     }
   }, 
   server: {
+    // 配置跨域请求
     proxy: {
       '/hello': {
         target: 'http://192.168.203.93:8000',
