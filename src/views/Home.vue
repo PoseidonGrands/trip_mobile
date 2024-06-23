@@ -3,6 +3,7 @@
         <h3 style="text-align:center; ">旅游网</h3>
         <Banner />
         <Hot />
+        <Star />
     </div>
 </template>
 
@@ -15,11 +16,13 @@ import { ajax } from '@/utils/ajax'
 //导入视图组件
 import Banner from '@/components/home/Banner.vue';
 import Hot from '@/components/home/Hot.vue'
+import Star from '@/components/home/Star.vue';
 
 export default{
     components: {
         Banner,
-        Hot
+        Hot,
+        Star
     },
     //页面创建时调用的生命周期函数
     created(){
@@ -38,7 +41,7 @@ export default{
 
 <style lang="less">
 
-.page-home{
+// .page-home{
     
-}
+// }
 </style>

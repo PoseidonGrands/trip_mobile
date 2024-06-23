@@ -8,34 +8,14 @@
                 title-style="text-align:left" />
         <!-- 景点列表 -->
          <div class="box-main">
-            <a href="#" class="box-item">
+            <a href="#" class="box-item" v-for="item in dataList" :key="item.id" >
                 <div class="img">
                     <span></span>
-                    <img src="/static/home/hot/h1.jpg" alt="">
+                    <img :src="item.img" alt="">
                 </div>
-                <h5 class="van-ellipsis">热门的景点信息aaaaaaaa</h5>
+                <h5 class="van-ellipsis">{{ item.name }}</h5>
                 <div class="price">
-                    <span>￥69</span>起
-                </div>
-            </a>
-            <a href="#" class="box-item">
-                <div class="img">
-                    <span></span>
-                    <img src="/static/home/hot/h1.jpg" alt="">
-                </div>
-                <h5 class="van-ellipsis">热门的景点信息aaaaaaaa</h5>
-                <div class="price">
-                    <span>￥69</span>起
-                </div>
-            </a>
-            <a href="#" class="box-item">
-                <div class="img">
-                    <span></span>
-                    <img src="/static/home/hot/h1.jpg" alt="">
-                </div>
-                <h5 class="van-ellipsis">热门的景点信息aaaaaaaa</h5>
-                <div class="price">
-                    <span>￥69</span>起
+                    <span>￥{{ item.price }}</span>起
                 </div>
             </a>
          </div>
@@ -44,7 +24,22 @@
 
 <script>
     export default{
-        
+        data(){
+            return{
+                dataList: []
+            }
+        },
+        created(){
+            this.dataList = [
+                {id: 1, img: '/static/home/hot/h1.jpg', name: '测试景点列表1111', price: 19},
+                {id: 2, img: '/static/home/hot/h2.jpg', name: '测试景点列表1111', price: 19},
+                {id: 3, img: '/static/home/hot/h3.jpg', name: '测试景点列表1111', price: 19},
+                {id: 4, img: '/static/home/hot/h4.jpg', name: '测试景点列表1111', price: 19},
+                {id: 5, img: '/static/home/hot/h5.jpg', name: '测试景点列表1111', price: 19},
+                {id: 6, img: '/static/home/hot/h6.jpg', name: '测试景点列表1111', price: 19},
+                {id: 7, img: '/static/home/hot/h7.jpg', name: '测试景点列表1111', price: 19},
+            ]
+        }
     }
 </script>
 
@@ -55,7 +50,7 @@
 
         width: 100%;
         
-        padding-top: 10px;
+        padding: 10px 20px;
         overflow: scroll;
     }
     .box-item{
