@@ -16,12 +16,12 @@ export default defineConfig({
   server: {
     // 配置跨域请求
     proxy: {
-      '/hello': {
-        target: 'http://192.168.203.93:8000',
+      '/api': {
+        target: 'http://127.0.0.1:8000/',
         changeOrigin: true,
-        pathRewrite: {
-          // '^/api': ''
-        }
+        // rewrite: (path) => path.replace(/^\/api/, '')
+        // ！！！！巨坑，不能用原来的pathRewrite，现在要用rewrite，否则无法识别该参数导致无法重写url
+        rewrite: (path) => path.replace('/api', '')
       }
     }
   }

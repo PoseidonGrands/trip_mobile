@@ -45,20 +45,20 @@
 
 <style lang="less">
 .home-hot-box{
-    .box-main{
+    .box-main{ 
         display: flex;
 
         width: 100%;
         
-        padding: 10px 20px;
-        overflow: scroll;
+        padding-top: 10px;
+        overflow-x: scroll;
     }
     .box-item{
         display: flex;
         flex-direction: column;
 
         width: 100px;
-        margin-right: 10px;
+        margin-left: 10px;
         
         .img{
             position: relative;

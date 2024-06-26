@@ -9,9 +9,9 @@ import Home from './views/Home.vue'
       Home
     },
     methods: {
-      customFilter(data){
-        return data.toUpperCase()   
-      }
+      // customFilter(data){
+      //   return data.toUpperCase()   
+      // }
     }
   }
 

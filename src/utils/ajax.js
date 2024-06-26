@@ -11,10 +11,10 @@ import axios from "axios"
  */
 
 export const ajax = axios.create({
-    headers: {
-        source: 'h5',
-        'Content-Type': 'application/x-www-form-urlencoded'
-    },
+    // headers: {
+    //     source: 'h5',
+    //     'Content-Type': 'application/x-www-form-urlencoded'
+    // },
     // 携带上一次的cookie
     withCredentials: true
 })

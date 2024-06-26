@@ -4,6 +4,7 @@
         <Banner />
         <Hot />
         <Star />
+        <TripFooter />
     </div>
 </template>
 
@@ -17,24 +18,26 @@ import { ajax } from '@/utils/ajax'
 import Banner from '@/components/home/Banner.vue';
 import Hot from '@/components/home/Hot.vue'
 import Star from '@/components/home/Star.vue';
+import TripFooter from '@/components/common/Footer.vue';
 
 export default{
     components: {
         Banner,
         Hot,
-        Star
+        Star,
+        TripFooter,
     },
     //页面创建时调用的生命周期函数
     created(){
         console.log('created...')
         // ajax.get('http://django.t.mukewang.com/api/system/slider/list/?types=11').then(resp => {
         // ajax.get('http://localhost:5173/api/system/slider/list/?types=11').then(resp => {
-        ajax.get('http://localhost:5173/hello/response_json').then(resp => {
-            console.log('resp is:', resp)
-        }).catch(err => {
-            console.log('error is:', err)
-        }
-        )
+        // ajax.get('http://localhost:5173/hello/response_json').then(resp => {
+        //     console.log('resp is:', resp)
+        // }).catch(err => {
+        //     console.log('error is:', err)
+        // }
+        // )
     }
 }
 </script>
